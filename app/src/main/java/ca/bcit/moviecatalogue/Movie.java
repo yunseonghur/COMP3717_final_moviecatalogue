@@ -2,26 +2,22 @@ package ca.bcit.moviecatalogue;
 
 public class Movie {
 
-    int id;
-    public String msg;
-    public boolean complete;
-    //    public Date date;
-    public String date;
+    private String title;
+    private String description;
+    private String link;
 
-    public Movie(int id, String msg, boolean complete, String date) {
-        this.id = id;
-        this.msg = msg;
-        this.complete = complete;
-        this.date = date;
+    public Movie(String title, String desc, String link) {
+        this.title = title;
+        this.description = desc;
+        this.link = link;
     }
 
     @Override
     public String toString() {
         return "Movie{" +
-                "id='" + id + '\'' +
-                ", msg='" + msg + '\'' +
-                ", complete=" + complete +
-                ", date=" + date +
+                "title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", link=" + link +
                 '}';
     }
 }
