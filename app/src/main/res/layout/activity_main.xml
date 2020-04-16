@@ -51,7 +51,7 @@
                 android:layout_marginLeft="60dp"
                 android:id="@+id/btnAddNew"
                 android:text="+"
-                android:background="@drawable/bgbtnnew"
+                android:background="@drawable/bg_btn_add"
                 android:textSize="38sp"
                 android:textColor="#FFF"
                 android:textAlignment="center"
