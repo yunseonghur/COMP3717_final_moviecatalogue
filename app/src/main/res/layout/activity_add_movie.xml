@@ -24,7 +24,7 @@
             android:textSize="26sp"
             android:textColor="#FFF"
             android:textAlignment="center"
-            android:text="New Movie"/>
+            android:text="@string/new_movie"/>
 
         <View
             android:layout_marginTop="20dp"
@@ -56,7 +56,7 @@
                 android:id="@+id/add_title"
                 android:textSize="18sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Title"
+                android:text="@string/title"
                 android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -65,7 +65,7 @@
                 android:id="@+id/title_movie"
                 android:inputType="text"
                 android:background="@drawable/bg_input_task"
-                android:paddingLeft="12dp"
+                android:paddingStart="12dp"
                 android:textColorHint="#B5B5B5"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
@@ -85,7 +85,7 @@
                 android:id="@+id/add_desc"
                 android:textSize="18sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Description"
+                android:text="@string/description"
                 android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -94,7 +94,7 @@
                 android:id="@+id/desc_movie"
                 android:inputType="text"
                 android:background="@drawable/bg_input_task"
-                android:paddingLeft="12dp"
+                android:paddingStart="12dp"
                 android:textColorHint="#B5B5B5"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
@@ -115,7 +115,7 @@
                 android:id="@+id/add_link"
                 android:textSize="18sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Link"
+                android:text="@string/link"
                 android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -124,7 +124,7 @@
                 android:id="@+id/link_movie"
                 android:inputType="text"
                 android:background="@drawable/bg_input_task"
-                android:paddingLeft="12dp"
+                android:paddingStart="12dp"
                 android:textColorHint="#B5B5B5"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
@@ -140,7 +140,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="20dp"
-        android:text="Save"
+        android:text="@string/save"
         android:textColor="#FFF"
         android:textAllCaps="false"
         android:background="@drawable/bg_btn_save"
@@ -153,7 +153,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="14dp"
-        android:text="Cancel"
+        android:text="@string/cancel"
         android:textColor="#AFAFAF"
         android:textAllCaps="false"
         android:background="@drawable/bg_btn_cancel"

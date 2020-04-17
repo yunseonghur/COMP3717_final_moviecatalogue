@@ -19,7 +19,7 @@
                     android:id="@+id/movie_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="19dp"
+                    android:text="title"
                     android:textSize="22sp"
                     android:textColor="#000C5D" />
 
@@ -27,6 +27,7 @@
                     android:id="@+id/movie_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="desc"
                     android:layout_marginTop="8dp"
                     android:textSize="18sp"
                     android:textColor="#000000" />
@@ -35,6 +36,7 @@
                     android:id="@+id/movie_link"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="link"
                     android:layout_marginTop="8dp"
                     android:textSize="18sp"
                     android:textColor="#7d7d7d" />

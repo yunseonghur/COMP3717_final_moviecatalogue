@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">moviecatalogue</string>
+    <string name="title">Title</string>
+    <string name="new_movie">New Movie</string>
+    <string name="description">Description</string>
+    <string name="link">Link</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
 </resources>

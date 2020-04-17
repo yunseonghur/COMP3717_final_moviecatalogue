@@ -6,10 +6,7 @@ public class Movie {
     private String description;
     private String link;
 
-    public Movie() {
-        this.title = "";
-        this.description = "";
-        this.link = "";
+    public Movie(){
     }
 
     public Movie(String title, String desc, String link) {

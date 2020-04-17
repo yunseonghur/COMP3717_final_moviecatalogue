@@ -11,21 +11,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.Random;
 
 public class AddMovieActivity extends AppCompatActivity {
 
     TextView titlePage, addTitle, addDesc, addLink;
-    EditText titleMovie, descMovie, linkMovie;
+    EditText editTitle, editDesc, editLink;
     Button btnSave, btnCancel;
 
     FirebaseDatabase database;
@@ -42,9 +36,9 @@ public class AddMovieActivity extends AppCompatActivity {
         addDesc = findViewById(R.id.add_desc);
         addLink = findViewById(R.id.add_link);
 
-        titleMovie = findViewById(R.id.title_movie);
-        descMovie = findViewById(R.id.desc_movie);
-        linkMovie = findViewById(R.id.link_movie);
+        editTitle = findViewById(R.id.title_movie);
+        editDesc = findViewById(R.id.desc_movie);
+        editLink = findViewById(R.id.link_movie);
 
         btnSave = findViewById(R.id.btn_save);
         btnCancel = findViewById(R.id.btn_cancel);
@@ -58,12 +52,18 @@ public class AddMovieActivity extends AppCompatActivity {
                 saveToFirebase();
             }
         });
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backToMain();
+            }
+        });
     }
 
     private void saveToFirebase(){
-        String title = titleMovie.getText().toString();
-        String desc = descMovie.getText().toString();
-        String link = linkMovie.getText().toString();
+        String title = editTitle.getText().toString();
+        String desc = editDesc.getText().toString();
+        String link = editLink.getText().toString();
 
         if(!TextUtils.isEmpty(title) && !TextUtils.isEmpty(desc) && !TextUtils.isEmpty(link)){
             Movie movie = new Movie(title, desc, link);
@@ -71,11 +71,11 @@ public class AddMovieActivity extends AppCompatActivity {
             movieDB.push().setValue(movie).addOnSuccessListener(new OnSuccessListener<Void>(){
                 @Override
                 public void onSuccess(Void aVoid) {
-                    Toast.makeText(AddMovieActivity.this, "Movie is added", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddMovieActivity.this, "Successfully added!", Toast.LENGTH_SHORT).show();
 
-                    titleMovie.setText("");
-                    descMovie.setText("");
-                    linkMovie.setText("");
+                    editTitle.setText("");
+                    editDesc.setText("");
+                    editLink.setText("");
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -86,5 +86,10 @@ public class AddMovieActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "All fields should be filled.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void backToMain(){
+        Intent intent = new Intent(AddMovieActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

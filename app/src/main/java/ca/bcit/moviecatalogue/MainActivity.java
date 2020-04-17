@@ -47,15 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.my_movies);
         btnAdd = findViewById(R.id.fab);
-
-        database = FirebaseDatabase.getInstance();
-        movieDB = database.getReference("MovieCatalogueApp");
-
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        showTask();
-
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +54,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        database = FirebaseDatabase.getInstance();
+        movieDB = database.getReference("MovieCatalogueApp");
+
+        //recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        showTask();
+
     }
 
     private void showTask(){
