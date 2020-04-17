@@ -65,7 +65,7 @@
                 android:id="@+id/title_movie"
                 android:inputType="text"
                 android:background="@drawable/bg_input_task"
-                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
                 android:textColorHint="#B5B5B5"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
@@ -94,12 +94,11 @@
                 android:id="@+id/desc_movie"
                 android:inputType="text"
                 android:background="@drawable/bg_input_task"
-                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
                 android:textColorHint="#B5B5B5"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:maxLength="30"/>
+                android:layout_height="55dp"/>
 
         </LinearLayout>
 
@@ -124,11 +123,12 @@
                 android:id="@+id/link_movie"
                 android:inputType="text"
                 android:background="@drawable/bg_input_task"
-                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
                 android:textColorHint="#B5B5B5"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
-                android:layout_height="55dp" />
+                android:layout_height="55dp"
+                />
 
         </LinearLayout>
 
