@@ -6,6 +6,12 @@ public class Movie {
     private String description;
     private String link;
 
+    public Movie() {
+        this.title = "";
+        this.description = "";
+        this.link = "";
+    }
+
     public Movie(String title, String desc, String link) {
         this.title = title;
         this.description = desc;
