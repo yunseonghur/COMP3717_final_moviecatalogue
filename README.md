@@ -1,3 +1,3 @@
-# COMP3717_final_moviecatalogue
+# COMP3717 Movie Catalogue app for Android Final Exam
 
 Yuni Hur | A01063658 | 3T
